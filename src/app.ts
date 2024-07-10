@@ -1,9 +1,15 @@
 import { createBot, MemoryDB, createProvider, addKeyword, createFlow } from '@builderbot/bot'
 import { BaileysProvider } from '@builderbot/provider-baileys'
+import { EVENTS } from "@builderbot/bot"
 
-const flowEmpty = addKeyword ('').addAnswer('')
+    const flowLocation = addKeyword(EVENTS.LOCATION)
+      .addAnswer('Ubicacion Recibida', null, async (ctx, {flowDynamic}) => {
+          const latitud = ctx.message.locationMessage.degreesLatitude
+          const longitud = ctx.message.locationMessage.degreesLongitude
+          await flowDynamic(`Latitud ${latitud}, Longitud ${longitud}`)
+        })
 
-const PORT = 3001
+const PORT = 3002
 
 const main = async () => {
     const provider = createProvider(BaileysProvider)
@@ -11,7 +17,8 @@ const main = async () => {
     const { handleCtx, httpServer } = await createBot({
         database: new MemoryDB(),
         provider: provider,
-        flow: createFlow([flowEmpty]),
+        flow: createFlow([flowLocation]),
+
     })
 
     httpServer(+PORT)
