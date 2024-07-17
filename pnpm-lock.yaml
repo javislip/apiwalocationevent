@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@builderbot/bot':
-    specifier: 1.1.6
-    version: 1.1.6
+    specifier: 1.1.7
+    version: 1.1.7
   '@builderbot/provider-baileys':
-    specifier: 1.1.6
-    version: 1.1.6
+    specifier: 1.1.7
+    version: 1.1.7
 
 devDependencies:
   '@types/node':
@@ -55,8 +55,8 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /@builderbot/bot@1.1.6:
-    resolution: {integrity: sha512-ljMT2UVZd6lH73e1UUomjml+h5LBUWb46nQtw9p+vOFQAfM/GWC9cUfhX661WtsrWdiN2jataXP59L2IDpJD/w==}
+  /@builderbot/bot@1.1.7:
+    resolution: {integrity: sha512-+9V5sOMNLmZ76s3fEu8zGTcqiGcMVgWGMh2MzP4sq6zO9xNj3LHsCHPqpefYP37134IMTus0SYHoqCqL2drfdQ==}
     dependencies:
       '@ffmpeg-installer/ffmpeg': 1.1.0
       body-parser: 1.20.2
@@ -73,8 +73,8 @@ packages:
       - supports-color
     dev: false
 
-  /@builderbot/provider-baileys@1.1.6:
-    resolution: {integrity: sha512-DwJAhgEI0HfaURy2ErBiB3C8btXPhNLIoYXteOu+slDH1zHKM+x/NGCK3gr3PEXl2FqUDhzXiPOwIgqs5+gjdw==}
+  /@builderbot/provider-baileys@1.1.7:
+    resolution: {integrity: sha512-adFQWoRlWOBesxfbFOoBpbM+t7yy5ye5fEYQY8kEE3tVSNhZrR8KF6XNVzI7KyR813mdHjWvCyUyGyxWMRcOtg==}
     dependencies:
       '@ffmpeg-installer/ffmpeg': 1.1.0
       '@types/polka': 0.5.7
